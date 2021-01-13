@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		AD74785E2587C9A500CB94DC /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AD74785D2587C9A500CB94DC /* main.cpp */; };
+		AD78B3FC25AF6648000CDC5F /* Functions.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AD78B3FA25AF6648000CDC5F /* Functions.cpp */; };
+		AD78B40125AF69F0000CDC5F /* Print.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AD78B3FF25AF69F0000CDC5F /* Print.cpp */; };
+		AD78B40625AF6ACE000CDC5F /* FillRand.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AD78B40425AF6ACE000CDC5F /* FillRand.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +28,10 @@
 /* Begin PBXFileReference section */
 		AD74785A2587C9A500CB94DC /* Arrays Function */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Arrays Function"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD74785D2587C9A500CB94DC /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		AD78B3F725AF58F6000CDC5F /* Functions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Functions.h; sourceTree = "<group>"; };
+		AD78B3FA25AF6648000CDC5F /* Functions.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Functions.cpp; sourceTree = "<group>"; };
+		AD78B3FF25AF69F0000CDC5F /* Print.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Print.cpp; sourceTree = "<group>"; };
+		AD78B40425AF6ACE000CDC5F /* FillRand.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = FillRand.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +65,10 @@
 			isa = PBXGroup;
 			children = (
 				AD74785D2587C9A500CB94DC /* main.cpp */,
+				AD78B3F725AF58F6000CDC5F /* Functions.h */,
+				AD78B3FA25AF6648000CDC5F /* Functions.cpp */,
+				AD78B3FF25AF69F0000CDC5F /* Print.cpp */,
+				AD78B40425AF6ACE000CDC5F /* FillRand.cpp */,
 			);
 			path = "Arrays Function";
 			sourceTree = "<group>";
@@ -88,7 +99,7 @@
 		AD7478522587C9A500CB94DC /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 1220;
+				LastUpgradeCheck = 1230;
 				TargetAttributes = {
 					AD7478592587C9A500CB94DC = {
 						CreatedOnToolsVersion = 12.2;
@@ -118,7 +129,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AD78B40125AF69F0000CDC5F /* Print.cpp in Sources */,
+				AD78B40625AF6ACE000CDC5F /* FillRand.cpp in Sources */,
 				AD74785E2587C9A500CB94DC /* main.cpp in Sources */,
+				AD78B3FC25AF6648000CDC5F /* Functions.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -239,6 +253,7 @@
 		AD7478622587C9A500CB94DC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -247,6 +262,7 @@
 		AD7478632587C9A500CB94DC /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
