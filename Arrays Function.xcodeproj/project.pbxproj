@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		AD74785E2587C9A500CB94DC /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AD74785D2587C9A500CB94DC /* main.cpp */; };
+		AD78B41125AF7E25000CDC5F /* separate_templated.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AD78B40F25AF7E25000CDC5F /* separate_templated.cpp */; };
+		AD78B41625B05FB2000CDC5F /* Functions.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AD78B41425B05FB2000CDC5F /* Functions.cpp */; };
+		AD78B41A25B05FEA000CDC5F /* FillRand.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AD78B41825B05FEA000CDC5F /* FillRand.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +28,10 @@
 /* Begin PBXFileReference section */
 		AD74785A2587C9A500CB94DC /* Arrays Function */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Arrays Function"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD74785D2587C9A500CB94DC /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		AD78B40F25AF7E25000CDC5F /* separate_templated.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = separate_templated.cpp; sourceTree = "<group>"; };
+		AD78B41325B05F66000CDC5F /* Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Header.h; sourceTree = "<group>"; };
+		AD78B41425B05FB2000CDC5F /* Functions.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Functions.cpp; sourceTree = "<group>"; };
+		AD78B41825B05FEA000CDC5F /* FillRand.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = FillRand.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +65,10 @@
 			isa = PBXGroup;
 			children = (
 				AD74785D2587C9A500CB94DC /* main.cpp */,
+				AD78B40F25AF7E25000CDC5F /* separate_templated.cpp */,
+				AD78B41325B05F66000CDC5F /* Header.h */,
+				AD78B41425B05FB2000CDC5F /* Functions.cpp */,
+				AD78B41825B05FEA000CDC5F /* FillRand.cpp */,
 			);
 			path = "Arrays Function";
 			sourceTree = "<group>";
@@ -118,7 +129,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AD78B41625B05FB2000CDC5F /* Functions.cpp in Sources */,
+				AD78B41A25B05FEA000CDC5F /* FillRand.cpp in Sources */,
 				AD74785E2587C9A500CB94DC /* main.cpp in Sources */,
+				AD78B41125AF7E25000CDC5F /* separate_templated.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

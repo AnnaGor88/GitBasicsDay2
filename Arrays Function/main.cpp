@@ -12,7 +12,6 @@ const int COLS=7;
 void FillRand (int arr[], const int n);
 void FillRand (double arr[], const int n);
 void FillRand (int arr[ROWS][COLS], const int m, const int n);
-
 template<typename T>
 void Print (T arr[], const int n);
 template<typename T>
@@ -24,9 +23,9 @@ template<typename T>
 void Sort(T arr[ROWS][COLS], const int m, const int n);
 
 template<typename T>
-int Sum (T arr[], const int n);
+T Sum (T arr[], const int n);
 template<typename T>
-int Sum(T arr[ROWS][COLS], const int m, const int n);
+T Sum(T arr[ROWS][COLS], const int m, const int n);
 
 template<typename T>
 double Avg (T arr[],const int n);
@@ -34,14 +33,14 @@ template<typename T>
 double Avg(T arr[ROWS][COLS], const int m, const int n);
 
 template<typename T>
-int minValue (T arr[], const int n);
+T minValue (T arr[], const int n);
 template<typename T>
-int minValue (T arr[ROWS][COLS], const int m, const int n);
+T minValue (T arr[ROWS][COLS], const int m, const int n);
 
 template<typename T>
-int maxValue (T arr[], const int n);
+T maxValue (T arr[], const int n);
 template<typename T>
-int maxValue (T arr[ROWS][COLS], const int m, const int n);
+T maxValue (T arr[ROWS][COLS], const int m, const int n);
 #define delimeter "\n-----------------------------------------------------\n"
 int main()
 {
@@ -83,7 +82,6 @@ int main()
     cout << delimeter;
     Print(i_arr2,ROWS,COLS);
 }
-    
 void FillRand (int arr[], const int n)
     {
         for (int i=0; i<n; i++)
@@ -109,7 +107,6 @@ void FillRand (int arr[ROWS][COLS], const int m, const int n)
         }
     }
 }
-
 template<typename T>
 void Print (T arr[], const int n)
 {
@@ -140,9 +137,9 @@ void Sort (T arr[], const int n)
         {
             if (arr[j]<arr[i])
             {
-                double buffer = arr[i];
+                T buffer = arr[i];
                 arr[i] = arr[j];
-                arr[j] = arr[i];
+                arr[j] = buffer ;
             }
         }
     }
@@ -166,7 +163,7 @@ void Sort (T arr[ROWS][COLS], const int m, const int n)
                     iterations++;
                     if (arr[k][l]<arr[i][j])
                     {
-                        int c=arr[k][l];
+                        T c=arr[k][l];
                         arr[k][l]=arr[i][j];
                         arr[i][j]=c;
                         exchanges++;
@@ -178,10 +175,11 @@ void Sort (T arr[ROWS][COLS], const int m, const int n)
     cout <<iterations << endl;
     cout << exchanges << endl;
 }
+
 template<typename T>
-int Sum (T arr[], const int n)
+T Sum (T arr[], const int n)
 {
-    int sum=0;
+    T sum=0;
     for (int i=0; i<n; i++)
     {
         sum+=arr[i];
@@ -189,9 +187,9 @@ int Sum (T arr[], const int n)
     return sum;
 }
 template<typename T>
-int Sum (T arr[ROWS][COLS], const int m, const int n)
+T Sum (T arr[ROWS][COLS], const int m, const int n)
 {
-    int sum=0;
+    T sum=0;
     for (int i=0; i<m; i++)
     {
         for (int j=0; j<n; j++)
@@ -201,6 +199,7 @@ int Sum (T arr[ROWS][COLS], const int m, const int n)
     }
     return sum;
 }
+
 template<typename T>
 double Avg (T arr[], const int n)
 {
@@ -213,10 +212,11 @@ double Avg(T arr[ROWS][COLS], const int m, const int n)
 {
     return double(Sum(arr,ROWS,COLS))/(m*n);
 }
+
 template<typename T>
-int minValue (T arr[], const int n)
+T minValue (T arr[], const int n)
 {
-    int min=arr[0];
+    T min=arr[0];
     for(int i=0; i<n;i++)
     {
         if (arr[i]<min)
@@ -225,9 +225,9 @@ int minValue (T arr[], const int n)
     return min;
 }
 template<typename T>
-int minValue (T arr[ROWS][COLS], const int m, const int n)
+T minValue (T arr[ROWS][COLS], const int m, const int n)
 {
-    int minRows=0, minCols=0;
+    T minRows=0, minCols=0;
     for (int i=0; i<m; i++)
     {
         for (int j=0; j<n; j++)
@@ -241,10 +241,11 @@ int minValue (T arr[ROWS][COLS], const int m, const int n)
     }
     return arr[minRows][minCols];
 }
+
 template<typename T>
-int maxValue (T arr[], const int n)
+T maxValue (T arr[], const int n)
 {
-    int max=arr[0];
+    T max=arr[0];
     for(int i=0; i<n;i++)
     {
         if (arr[i]>max)
@@ -253,9 +254,9 @@ int maxValue (T arr[], const int n)
     return max;
 }
 template<typename T>
-int maxValue (T arr[ROWS][COLS], const int m, const int n)
+T maxValue (T arr[ROWS][COLS], const int m, const int n)
 {
-    int maxRows=0, maxCols=0;
+    T maxRows=0, maxCols=0;
     for (int i=0; i<m; i++)
     {
         for (int j=0; j<n; j++)
